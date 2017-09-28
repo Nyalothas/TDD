@@ -13,7 +13,7 @@ namespace PolymorphismTestProject___TestsAfterCode
             // Arrange
             int weeklyHours = 55;
             int wage = 70;
-            int salary = 1;
+            int salary = 40 * wage;
             Employee e = new Employee();
 
             string expectedResponse = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
@@ -33,7 +33,7 @@ namespace PolymorphismTestProject___TestsAfterCode
             // Arrange
             int weeklyHours = 55;
             int wage = 70;
-            int salary = 1;
+            int salary = weeklyHours * wage;
             Contractor e = new Contractor();
 
             string expectedResponse = String.Format("This HAPPY CONTRACTOR worked {0} hrs. " +
@@ -56,7 +56,7 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = 40 * wage;
             Employee e = new Employee();
 
-            string expectedResponse = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
+            string expectedResponse = String.Format("`This ANGRY EMPLOYEE worked {0} hrs. " +
                             "Paid for 40 hrs at $ {1}" +
                             "/hr = ${2}", weeklyHours, wage, salary);
 
@@ -76,7 +76,7 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = weeklyHours * wage;
             Contractor e = new Contractor();
 
-            string expectedResponse = String.Format("This HAPPY CONTRACTOR worked {0} hrs. " +
+            string expectedResponse = String.Format("`This HAPPY CONTRACTOR worked {0} hrs. " +
                             "Paid for {0} hrs at $ {1}" +
                             "/hr = ${2} ", weeklyHours, wage, salary);
 

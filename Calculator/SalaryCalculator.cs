@@ -7,5 +7,10 @@
         {
             return hourlyWage * HoursInYear;
         }
+
+        public decimal GetHourlyWage(int annualSalary)
+        {
+            return annualSalary/HoursInYear;
+        }
     }
 }

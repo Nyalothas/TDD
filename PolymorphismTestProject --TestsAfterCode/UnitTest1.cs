@@ -16,9 +16,9 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = 40 * wage;
             Employee e = new Employee();
 
-            string expectedResponse = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
-                            "Paid for 40 hrs at $ {1}" +
-                            "/hr = ${2}", weeklyHours, wage, salary);
+            string expectedResponse = $"This ANGRY EMPLOYEE worked {weeklyHours} hrs. " +
+                                      $"Paid for 40 hrs at $ {wage}" +
+                                      $"/hr = ${salary}";
 
             // Act
             string response = e.CalculateWeeklySalary(weeklyHours, wage);
@@ -36,9 +36,9 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = weeklyHours * wage;
             Contractor e = new Contractor();
 
-            string expectedResponse = String.Format("This HAPPY CONTRACTOR worked {0} hrs. " +
-                            "Paid for {0} hrs at $ {1}" +
-                            "/hr = ${2} ", weeklyHours, wage, salary);
+            string expectedResponse = $"This HAPPY CONTRACTOR worked {weeklyHours} hrs. " +
+                                      $"Paid for {weeklyHours} hrs at $ {wage}" +
+                                      $"/hr = ${salary} ";
 
             // Act
             string response = e.CalculateWeeklySalary(weeklyHours, wage);
@@ -56,9 +56,9 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = 40 * wage;
             Employee e = new Employee();
 
-            string expectedResponse = String.Format("`This ANGRY EMPLOYEE worked {0} hrs. " +
-                            "Paid for 40 hrs at $ {1}" +
-                            "/hr = ${2}", weeklyHours, wage, salary);
+            string expectedResponse = $"`This ANGRY EMPLOYEE worked {weeklyHours} hrs. " +
+                                      $"Paid for 40 hrs at $ {wage}" +
+                                      $"/hr = ${salary}";
 
             // Act   
             string response = e.CalculateWeeklySalary(weeklyHours, wage);
@@ -76,9 +76,9 @@ namespace PolymorphismTestProject___TestsAfterCode
             int salary = weeklyHours * wage;
             Contractor e = new Contractor();
 
-            string expectedResponse = String.Format("`This HAPPY CONTRACTOR worked {0} hrs. " +
-                            "Paid for {0} hrs at $ {1}" +
-                            "/hr = ${2} ", weeklyHours, wage, salary);
+            string expectedResponse = $"`This HAPPY CONTRACTOR worked {weeklyHours} hrs. " +
+                                      $"Paid for {weeklyHours} hrs at $ {wage}" +
+                                      $"/hr = ${salary} ";
 
             // Act   
             string response = e.CalculateWeeklySalary(weeklyHours, wage);

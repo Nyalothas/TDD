@@ -8,25 +8,28 @@ namespace Polymorphism
 {
     public class Employee
     {
-        public virtual void CalculateWeeklySalary(int weeklyHours, int wage)
+        public virtual string CalculateWeeklySalary(int weeklyHours, int wage)
         {
             var salary = 40 * wage;
-            Console.WriteLine("\nThis ANGRY EMPLOYEE worked {0} hrs. " +
-                  "Paid for 40 hrs at $ {1}" +
-                  "/hr = ${2} \n", weeklyHours, wage, salary);
+            string result = String.Format("This ANGRY EMPLOYEE worked {0} hrs. " +
+                            "Paid for 40 hrs at $ {1}" +
+                            "/hr = ${2}", weeklyHours, wage, salary);
+            Console.WriteLine("\n" + result + " \n");
             Console.WriteLine("---------------------------------------------\n");
+            return result;
         }
     }
 
     public class Contractor : Employee
     {
-        public override void CalculateWeeklySalary(int weeklyHours, int wage)
+        public override string CalculateWeeklySalary(int weeklyHours, int wage)
         {
             var salary = weeklyHours * wage;
-            Console.WriteLine("\nThis HAPPY CONTRACTOR worked {0} hrs. " +
-                              "Paid for {0} hrs at $ {1}" +
-                              "/hr = ${2} ", weeklyHours, wage, salary);
-            Console.WriteLine("---------------------------------------------\n");
+            string result = String.Format("This HAPPY CONTRACTOR worked {0} hrs. " +
+                            "Paid for {0} hrs at $ {1}" +
+                            "/hr = ${2} ", weeklyHours, wage, salary);
+            Console.WriteLine("\n" + result + " \n");
+            return result;
         }
     }
 
